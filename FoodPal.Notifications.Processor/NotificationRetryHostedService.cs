@@ -39,7 +39,7 @@ namespace FoodPal.Notifications.Processor
         {
             _logger.LogInformation($"{nameof(NotificationRetryHostedService)} started.");
 
-            _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromMinutes(15));
+            _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromMinutes(5));
             return Task.CompletedTask;
         }
 
